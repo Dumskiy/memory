@@ -3,46 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <title>Игра Мемори</title>
-  <link rel="stylesheet" href="css/style.css">
   <script src="vendor/react.development.js"></script>
   <script src="vendor/react-dom.development.js"></script>
   <script src="vendor/babel.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
   <script src="data.js"></script>
 </head>
 <body>
-  <div id="root">Корневой элемент</div>
+  <div id="root"></div>
   <script type="text/babel">
     const container = document.getElementById('root');
     const root = ReactDOM.createRoot(container);
-    root.render(<App images={images}/>);
 
-    function App({images = []}) {
+    root.render(
+      <App
+        images={images}
+        visibleItems={visibleItems}
+        finishedItems={finishedItems}
+      />
+    );
 
-      const cards = images.map((item) => {
-        <Card 
-          url={item.url}
-          description={item.description}
-        />
-      });
-      
+    function App({images = [], visibleItems = [], finishedItems = []}) {
 
       return (
         <section className="game container">
-          <ul className="cards cards-theme-cars">
-            {cards}
-          </ul>
-      </section>
+          <Grid
+            images={images}
+            visibleItems={visibleItems}
+            finishedItems={finishedItems}
+          />
+        </section>
       );
     }
 
-    function Card({url, description}) {
+    function Grid({images, visibleItems, finishedItems}) {
+
       return (
-        <li className="card">
-          <img src={url} width="204" height="144" alt={description} />
+        <ul className="cards">
+          {images.map((item) => (
+            <Card
+              key={item.id}
+              url={item.url}
+              description={item.description}
+              isVisible={visibleItems.includes(item.id)}
+              isFinished={finishedItems.includes(item.id)}
+            />
+          ))}
+        </ul>
+      );
+    }
+
+    function Card({url, description, isVisible, isFinished}) {
+
+      const className = `${
+        isVisible ? 'card-show' : ''
+      } ${
+        isFinished ? 'card-finished' : ''
+      }`;
+
+      return (
+        <li className={`card ${className}`}>
+          <img
+            width="204" height="144"
+            src={url}
+            alt={description}
+          />
         </li>
       );
     }
-    
   </script>
 </body>
 </html>
