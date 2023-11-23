@@ -234,6 +234,16 @@ body {
   list-style: none;
 
   perspective: 1000px; /* Для анимации */
+
+  --theme-back: url("../img/back-cats.svg");
+}
+
+.cards-theme-flowers {
+  --theme-back: url("../img/back-flowers.svg");
+}
+
+.cards-theme-cars {
+  --theme-back: url("../img/back-cars.svg");
 }
 
 .card {
@@ -266,7 +276,7 @@ body {
   content: "";
   width: 218px;
   height: 158px;
-  background-image: url("../img/back-cats.svg");
+  background-image: var(--theme-back);
   background-repeat: no-repeat;
   background-position: center;
   backface-visibility: hidden;
