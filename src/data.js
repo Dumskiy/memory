@@ -76,22 +76,12 @@ const flowers = [{
   'description': '',
 }];
 
-const imageCollection = {
+export const imageCollection = {
   flowers, cats, cars,
 };
 
-const results = [
+export const results = [
   { name: 'Аня', stepsCount: 16 },
   { name: 'Вася', stepsCount: 12 },
   { name: 'Петя', stepsCount: 19 }
 ];
-
-const getImages = (type) => {
-  const imagePairs = imageCollection[type].map((item) => ({
-    ...item, id: `${item.id}-1`,
-  }));
-
-  const mergedImages = [...imageCollection[type], ...imagePairs];
-  
-  return RANDOMIZED ? mergedImages.sort(() => 0.5 - Math.random()) : mergedImages;
-};
