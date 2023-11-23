@@ -1,14 +1,14 @@
-const GAME_TYPES = [
+export const GAME_TYPES = [
   { type: 'cats', text: 'Котики' },
   { type: 'flowers', text: 'Цветочки' },
   { type: 'cars', text: 'Машины' },
 ];
 
-const AppRoute = {
+export const AppRoute = {
   Initial: 'initial',
   Game: 'game',
   Results: 'results',
 };
 
-const TIMEOUT = 900;
-const RANDOMIZED = true;
+export const TIMEOUT = 900;
+export const RANDOMIZED = true;
