@@ -1,8 +1,8 @@
 import React from 'react';
 import { useGame } from '../use-game.js';
-import { Modal } from './modal.jsx';
-import { Grid } from './grid.jsx';
-import { Progress } from './progress.jsx';
+import { Modal } from './Modal.jsx';
+import { Grid } from './Grid.jsx';
+import { Progress } from './Progress.jsx';
 
 export function GamePage({ images = [], onShowResults, gameType }) {
 
