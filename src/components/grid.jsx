@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from './card.jsx';
+import { Card } from './Card.jsx';
 import { TIMEOUT } from '../settings.js';
 
 export function Grid({ images = [], finishedItems, checkItems, gameType }) {

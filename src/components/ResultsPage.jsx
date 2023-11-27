@@ -1,6 +1,6 @@
 import React from 'react';
 import getDeclension from '@dubaua/get-declension';
-import { ResultsTable } from './results-table.jsx';
+import { ResultsTable } from './ResultsTable.jsx';
 
 export function ResultsPage({ stepsCount, results, onResetGame }) {
 
