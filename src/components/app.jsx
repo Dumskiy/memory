@@ -1,11 +1,8 @@
 import React from 'react';
-
 import { AppRoute } from '../settings.js';
-import { GamePage } from './GamePage.jsx';
-import { InitialPage } from './InitialPage.jsx';
-import { ResultsPage } from './ResultsPage.jsx';
-
-import './App.module.scss';
+import { Game } from './Game.jsx';
+import { Rules } from './Rules.jsx';
+import { Result } from './Result.jsx';
 
 export const App = ({ getImages, results }) => {
     const [page, setPage] = React.useState(AppRoute.Initial);
@@ -31,12 +28,18 @@ export const App = ({ getImages, results }) => {
     const getPage = (route) => {
         switch (route) {
             case AppRoute.Initial:
-                return <InitialPage onStart={handleStart} />;
+                return <Rules onStart={handleStart} />;
             case AppRoute.Game:
-                return <GamePage images={images} gameType={gameType} onShowResults={showResults} />;
+                return (
+                    <Game
+                        images={images}
+                        gameType={gameType}
+                        onShowResults={showResults}
+                    />
+                );
             case AppRoute.Results:
                 return (
-                    <ResultsPage
+                    <Result
                         stepsCount={result}
                         onResetGame={handleReset}
                         results={results}

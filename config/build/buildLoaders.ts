@@ -38,13 +38,14 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
         loader: "css-loader",
         options: {
             modules: {
-                localIdentName: isDev ? '[path][name]__[local]' : '[hash:base64:8]'
+                // localIdentName: isDev ? '[path][name]__[local]' : '[hash:base64:8]'
+                localIdentName: '[local]'
             },
         },
     }
 
     const scssLoader = {
-        test: /\.s[ac]ss$/i,
+        test: /\.(c|sa|sc)ss$/i,
         use: [
             // Creates `style` nodes from JS strings
             isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
@@ -79,10 +80,10 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
 
 
     return [
-        assetLoader,
+        // assetLoader,
         scssLoader,
         // tsLoader,
         babelLoader,
-        svgrLoader
+        // svgrLoader
     ]
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { Card } from './Card.jsx';
 import { TIMEOUT } from '../settings.js';
 
-export function Grid({ images = [], finishedItems, checkItems, gameType }) {
+export function Cards({ images = [], finishedItems, checkItems, gameType }) {
     const [visibleItems, setVisibleItems] = React.useState([]);
 
     const handleCardClick = (id) => {
@@ -27,7 +27,7 @@ export function Grid({ images = [], finishedItems, checkItems, gameType }) {
     };
 
     return (
-        <ul className={`cards cards-theme-${gameType}`}>
+        <ul className={`cards cards--theme-${gameType}`}>
             {images.map((item) => (
                 <Card
                     key={item.id}

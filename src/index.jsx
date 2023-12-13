@@ -1,19 +1,10 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom/client';
-// import { results } from './data.js';
-// import { getImages } from './get-images.js';
-// import { App } from './components/app.jsx';
-
 import {createRoot} from "react-dom/client";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import {App} from "./components/App";
-
-
-import { InitialPage } from "./components/InitialPage";
-
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(<App getImages={getImages} results={results}/>);
-
+import {App} from "./components/App.jsx";
+import { Rules } from "./components/Rules.jsx";
+import { getImages } from './get-images.js';
+import { results } from './data.js';
+import "./style/style.scss"
 
 const root = document.getElementById('root');
 
@@ -26,11 +17,11 @@ const container = createRoot(root);
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <App />,
+        element: <App getImages={getImages} results={results}/>,
         children: [
             {
                 path: '/components',
-                element:  <InitialPage />
+                element:  <Rules />
             },
         ]
     },

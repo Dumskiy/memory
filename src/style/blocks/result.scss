@@ -1,0 +1,22 @@
+.result {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    
+    h2 {
+        margin: 0;
+        margin-bottom: 12px;
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 56px;
+    }
+    
+    p {
+        margin: 0;
+        margin-bottom: 24px;
+    }
+    
+    &__button {
+        width: 160px;
+    }
+}

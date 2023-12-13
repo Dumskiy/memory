@@ -23,19 +23,28 @@ export function buildPlugins({mode, paths, analyzer, platform}: BuildOptions): C
 
     if(isDev) {
         plugins.push(new webpack.ProgressPlugin())
-        /** Выносит проверку типов в отдельный процесс: не нагружая сборку */
+        /* Выносит проверку типов в отдельный процесс: не нагружая сборку */
         plugins.push(new ForkTsCheckerWebpackPlugin())
         // plugins.push(new ReactRefreshWebpackPlugin())
+        plugins.push(new CopyPlugin({
+            patterns: [
+                { from: path.resolve(paths.public, 'fonts'), to: path.resolve(paths.output, 'fonts') },
+                { from: path.resolve(paths.public, 'img'), to: path.resolve(paths.output, 'img') },
+            ],
+        }),)
     }
 
     if(isProd) {
         plugins.push(new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash:8].css',
             chunkFilename: 'css/[name].[contenthash:8].css',
+            // filename: 'css/[name].css',
+            // chunkFilename: 'css/[name].css',
         }))
         plugins.push(new CopyPlugin({
             patterns: [
-                { from: path.resolve(paths.public, 'locales'), to: path.resolve(paths.output, 'locales') },
+                { from: path.resolve(paths.public, 'fonts'), to: path.resolve(paths.output, 'fonts') },
+                { from: path.resolve(paths.public, 'img'), to: path.resolve(paths.output, 'img') },
             ],
         }),)
     }

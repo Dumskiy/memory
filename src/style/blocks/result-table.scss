@@ -1,0 +1,42 @@
+.result-table {
+    width: 520px;
+    margin: 36px auto 32px;
+    font-size: 16px;
+    line-height: 22px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 20px rgba(140, 174, 200, 0.25);
+    border-radius: 10px;
+    border-collapse: collapse;
+
+    tbody {
+        tr:last-child {
+            padding-bottom: 10px;
+        }
+    }
+    
+    &__row {
+        display: grid;
+        grid-template-columns: 120px 260px 140px;
+        align-items: center;
+
+        th {
+            padding: 18px 32px 8px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            color: #8caec8;
+            text-align: left;
+        }
+        
+        td {
+            padding: 8px 32px;
+            text-align: left;
+        }
+
+        &--active {
+            font-weight: 900;
+            color: #ffffff;
+            background-color: #00ca51;
+        }
+    }
+}
