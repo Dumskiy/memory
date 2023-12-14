@@ -1,7 +1,7 @@
 export const GAME_TYPES = [
-  { type: 'cats', text: 'Котики' },
-  { type: 'flowers', text: 'Цветочки' },
-  { type: 'cars', text: 'Машины' },
+  { type: 'frontend', text: 'Frontend' },
+  { type: 'backend', text: 'Backend' },
+  { type: 'tools', text: 'Tools' },
 ];
 
 export const AppRoute = {

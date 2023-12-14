@@ -10,11 +10,13 @@ export function Card({ item, isVisible, isFinished, onCardClick }) {
 
     return (
         <li onClick={handleClick} className={`card ${className}`}>
-            <img className="card__image"
-                width="204" height="144"
-                src={url}
-                alt={description}
-            />
+            <div className="card__image-wrapper">
+                <img className="card__image"
+                    width="204" height="144"
+                    src={url}
+                    alt={description}
+                />
+            </div>
         </li>
     );
 }

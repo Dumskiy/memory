@@ -1,0 +1,13 @@
+/* Colors */
+$white: #ffffff;
+$black: #000000;
+$gradient-blue: #0064ff;
+$gradient-green: #00ff00;
+$gradient-red: #ff0000;
+
+/* Display-P3 color, when supported. */
+@supports (color: color(display-p3 1 1 1)) {
+    $gradient-blue: color(display-p3 0 0.2 1);
+    $gradient-green: color(display-p3 0.4 1 0);
+    $gradient-red: color(display-p3 1 0 0);
+}

@@ -1,0 +1,22 @@
+:root {
+    --animation-duration: 0.8s;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    color: $black;
+    background-color: $black;    
+}
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+}

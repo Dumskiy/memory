@@ -1,83 +1,83 @@
-const cats = [{
+const frontend = [{
   'id': 'YdAqiUkUoWA',
-  'url': 'img/cats-1.jpg',
+  'url': 'img/frontend-1.svg',
   'description': '',
 }, {
   'id': 'hX_hf2lPpUU',
-  'url': 'img/cats-2.jpg',
+  'url': 'img/frontend-2.svg',
   'description': '',
 }, {
   'id': 'w1JE5duY62M',
-  'url': 'img/cats-3.jpg',
+  'url': 'img/frontend-3.svg',
   'description': '',
 }, {
   'id': '3tYZjGSBwbk',
-  'url': 'img/cats-4.jpg',
+  'url': 'img/frontend-4.svg',
   'description': '',
 }, {
   'id': 'NoXUQ54pDac',
-  'url': 'img/cats-5.jpg',
+  'url': 'img/frontend-5.svg',
   'description': '',
 }, {
   'id': 'OZhYgZh0bAg',
-  'url': 'img/cats-6.jpg',
+  'url': 'img/frontend-6.svg',
   'description': '',
 }];
 
-const cars = [{
+const backend = [{
   'id': 'YdAqiUkUoWA',
-  'url': 'img/cars-1.jpg',
+  'url': 'img/backend-1.svg',
   'description': '',
 }, {
   'id': 'hX_hf2lPpUU',
-  'url': 'img/cars-2.jpg',
+  'url': 'img/backend-2.svg',
   'description': '',
 }, {
   'id': 'w1JE5duY62M',
-  'url': 'img/cars-3.jpg',
+  'url': 'img/backend-3.svg',
   'description': '',
 }, {
   'id': '3tYZjGSBwbk',
-  'url': 'img/cars-4.jpg',
+  'url': 'img/backend-4.svg',
   'description': '',
 }, {
   'id': 'NoXUQ54pDac',
-  'url': 'img/cars-5.jpg',
+  'url': 'img/backend-5.svg',
   'description': '',
 }, {
   'id': 'OZhYgZh0bAg',
-  'url': 'img/cars-6.jpg',
+  'url': 'img/backend-6.svg',
   'description': '',
 }];
 
-const flowers = [{
+const tools = [{
   'id': 'YdAqiUkUoWA',
-  'url': 'img/flowers-1.jpg',
+  'url': 'img/tools-1.svg',
   'description': '',
 }, {
   'id': 'hX_hf2lPpUU',
-  'url': 'img/flowers-2.jpg',
+  'url': 'img/tools-2.svg',
   'description': '',
 }, {
   'id': 'w1JE5duY62M',
-  'url': 'img/flowers-3.jpg',
+  'url': 'img/tools-3.svg',
   'description': '',
 }, {
   'id': '3tYZjGSBwbk',
-  'url': 'img/flowers-4.jpg',
+  'url': 'img/tools-4.svg',
   'description': '',
 }, {
   'id': 'NoXUQ54pDac',
-  'url': 'img/flowers-5.jpg',
+  'url': 'img/tools-5.svg',
   'description': '',
 }, {
   'id': 'OZhYgZh0bAg',
-  'url': 'img/flowers-6.jpg',
+  'url': 'img/tools-6.svg',
   'description': '',
 }];
 
 export const imageCollection = {
-  flowers, cats, cars,
+  frontend, backend, tools
 };
 
 export const results = [

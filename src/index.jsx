@@ -4,7 +4,7 @@ import {App} from "./components/App.jsx";
 import { Rules } from "./components/Rules.jsx";
 import { getImages } from './get-images.js';
 import { results } from './data.js';
-import "./style/style.scss"
+import "./sass/style.scss"
 
 const root = document.getElementById('root');
 

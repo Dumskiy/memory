@@ -1,0 +1,60 @@
+@property --border-angle-1 {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0deg;
+}
+
+@property --border-angle-2 {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 90deg;
+}
+
+@property --border-angle-3 {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 180deg;
+}
+
+@keyframes rotateBackground {
+    to {
+        --border-angle-1: 360deg;
+    }
+}
+
+@keyframes rotateBackground2 {
+    to {
+        --border-angle-2: -270deg;
+    }
+}
+
+@keyframes rotateBackground3 {
+    to {
+        --border-angle-3: 540deg;
+    }
+}
+
+@mixin gradient {
+    --border-angle-1: 0deg;
+    --border-angle-2: 90deg;
+    --border-angle-3: 180deg;
+    background-image: conic-gradient(from var(--border-angle-1) at 10% 15%,
+            transparent,
+            $gradient-blue 10%,
+            transparent 30%,
+            transparent),
+        conic-gradient(from var(--border-angle-2) at 70% 60%,
+            transparent,
+            $gradient-green 10%,
+            transparent 60%,
+            transparent),
+        conic-gradient(from var(--border-angle-3) at 50% 20%,
+            transparent,
+            $gradient-red 10%,
+            transparent 50%,
+            transparent);
+    animation:
+        rotateBackground 3s linear infinite,
+        rotateBackground2 8s linear infinite,
+        rotateBackground3 13s linear infinite;
+}
