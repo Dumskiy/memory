@@ -1,7 +1,3 @@
-:root {
-    --animation-duration: 0.8s;
-}
-
 html {
     height: 100%;
 }
@@ -9,7 +5,7 @@ html {
 body {
     height: 100%;
     margin: 0;
-    font-family: "Nunito", sans-serif;
+    font-family: "Nunito", "Arial", sans-serif;
     font-size: 20px;
     line-height: 28px;
     color: $black;

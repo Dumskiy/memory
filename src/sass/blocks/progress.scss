@@ -15,7 +15,7 @@
     &__bar {
         background: linear-gradient(to right, $gradient-green 0%, $gradient-blue 45%, $gradient-red 95%);
         border-radius: 8px;
-        transition: width var(--animation-duration);
+        transition: width $animation-duration;
     }
     
     &__description {

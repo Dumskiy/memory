@@ -8,7 +8,6 @@
         margin: 0;
         margin-bottom: 12px;
         font-weight: 900;
-
         background-clip: text;
         background-image: linear-gradient(to right, $gradient-green 0%, $gradient-blue 40%, $gradient-red 70%);
         -webkit-text-stroke: transparent 5px;
@@ -92,40 +91,5 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-    }
-
-    &__button {
-        padding: 2px;
-        font-family: inherit;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 24px;
-        color: #ffffff;
-        border: none;
-        cursor: pointer;
-        box-sizing: border-box;
-        
-        &:hover span {
-            background-color: transparentize($black, 0.2);
-            font-size: 24px;
-        }
-        
-        &:active span {
-            background-color: transparentize($black, 0.5);
-        }
-    }
-
-    &__button {
-        @include gradient;
-        background-color: $black;
-        border-radius: 15px;
-
-        span {
-            background-color: $black;
-            display: block;
-            padding: 16px 24px 16px;
-            box-sizing: border-box;
-            border-radius: 15px;
-        }
     }
 }

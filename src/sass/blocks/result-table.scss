@@ -1,12 +1,18 @@
-.result-table {
+.results-table {
+    @include gradient;
     width: 520px;
     margin: 36px auto 32px;
-    font-size: 16px;
-    line-height: 22px;
-    background-color: #ffffff;
-    box-shadow: 0 5px 20px rgba(140, 174, 200, 0.25);
+    padding: 2px;
     border-radius: 10px;
-    border-collapse: collapse;
+
+    &__table {
+        font-size: 16px;
+        line-height: 22px;
+        background-color: $black;
+        border-radius: 10px;
+        border-collapse: collapse;
+        color: $white;
+    }
 
     tbody {
         tr:last-child {
@@ -24,7 +30,6 @@
             font-weight: 700;
             font-size: 16px;
             line-height: 20px;
-            color: #8caec8;
             text-align: left;
         }
         
@@ -35,8 +40,7 @@
 
         &--active {
             font-weight: 900;
-            color: #ffffff;
-            background-color: #00ca51;
+            background: linear-gradient(to right, $gradient-green 0%, $gradient-blue 40%, $gradient-red 70%);
         }
     }
 }

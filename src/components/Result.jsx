@@ -7,11 +7,13 @@ export function Result({ stepsCount, results, onResetGame }) {
 
     return (
         <section className="result container">
-            <h2>Лучшие результаты:</h2>
-            <p>Вы завершили игру за <b>{stepsDeclension}</b>, так держать!</p>
+            <h2 className="result__title">Лучшие результаты:</h2>
+            <p className="result__steps">Вы завершили игру за <b>{stepsDeclension}</b>, так держать!</p>
             <ResultsTable current={stepsCount} results={results} />
-            <p>Хотите попробовать ещё раз?</p>
-            <button onClick={onResetGame} className="result__button button" type="button">Новая игра</button>
+            <p className="result__question">Хотите попробовать ещё раз?</p>
+            <button onClick={onResetGame} className="result__button button" type="button">
+                <span>Новая игра</span>
+            </button>
         </section>
     );
 }

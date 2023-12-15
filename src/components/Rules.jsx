@@ -23,7 +23,7 @@ export function Rules({ onStart }) {
                 {GAME_TYPES.map(({ type, text }) => (
                     <button
                         key={type}
-                        className={`rules__button rules__button--${type}`}
+                        className={`rules__button rules__button--${type} button`}
                         onClick={() => handleStart(type)}
                     >
                         <span>{text}</span>
